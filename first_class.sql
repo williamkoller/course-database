@@ -1,22 +1,20 @@
-/* Modelagem Basica 
+-- CONNECTION: name=course_databaseuse course_database;
 
-CLIENTES 
+CREATE TABLE IF NOT EXISTS `course_database`.`clientes` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `nome` VARCHAR(255) NOT NULL,
+  `email` VARCHAR(45) NOT NULL,
+  `endereco` VARCHAR(100) NOT NULL,
+  `telefone` VARCHAR(45) NOT NULL,
+  `cpf` VARCHAR(14) NOT NULL,
+  `sexo` VARCHAR(1) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE INDEX `email_UNIQUE` (`email` ASC)
+);  
+  
+select * from clientes; 
 
-NOME - CARACTER(30)
-CPF - NUMEROCI(11)
-EMAIL - CARACTER(30)
-TELEFONE - CARACTER(30)
-ENDERECO - CARACTER(100)
-SEXO - CARACTER(1)
+desc clientes;
 
-*/
-/* Processos de Modelagem 
-FASE 01 E FASE 02 - ADD ADM DE DADOS
-
-MODELAGEM CONCEITUAL - RASCUNHO 
-MODELAGEM LÓGICA - QUALQUER PROGRAMA DE MODELAGEM
-
-FASE 03 - DBA - AD
-MODELAGEM FÍSICA - SCRIPTS DE BANCO
-
-*/
+INSERT INTO clientes (nome, email, endereco, telefone, cpf, sexo) 
+	VALUES ('', '', '', '', '', '');
