@@ -1,1 +1,1 @@
-### Course Database SQL and NoSQL
+### Course Database SQL
