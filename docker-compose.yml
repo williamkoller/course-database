@@ -13,3 +13,8 @@ services:
             - '3306:3306'
         volumes: 
             - ./db:/var/lib/mysql
+        networks: 
+            - mysql-compose-networks    
+networks: 
+    mysql-compose-networks:
+        driver: bridge            
